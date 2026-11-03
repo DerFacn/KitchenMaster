@@ -8,12 +8,6 @@ def create_app(config_obj=Config) -> Quart:
 
     @app.route('/')
     async def index():
-        return {
-            "message": "Hello world",
-            "config": {
-                "note": "This is just for testing. Do not show anyone your configuration variables!", 
-                "secret": app.config.get('SECRET_KEY')
-            }
-        }
+        return {"message": "Hello world"}
     
     return app
